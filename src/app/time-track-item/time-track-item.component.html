@@ -1,0 +1,22 @@
+<div class="time-track" [class.active]="isPaused==false">
+  <div class="pull-left">
+    <span>{{taskDesc}}</span>
+  </div>
+  <div class="pull-right">
+    <div *ngIf="isPaused==false">
+      <span>
+        {{tick | tickFormat}}
+      </span>
+    </div>
+    <div *ngIf="isFirstTime==true">
+      <span>
+        {{tick | tickFormat}}
+      </span>
+    </div>
+    <div *ngIf="isPaused==true && isFirstTime==false">
+      <span style="color: green">
+        <i class="fa fa-check"></i>
+      </span>
+    </div>
+  </div>
+</div>

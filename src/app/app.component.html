@@ -1,0 +1,52 @@
+<div class="container">
+  <h1>
+    Cash Deposit
+  </h1>
+  <div class="row">
+    <div class="col-xs-8">
+      <div class="row">
+        <div class="col-xs-12">
+          <div *ngIf="activePage=='cd0'">
+            <app-cash-deposit-a></app-cash-deposit-a>
+          </div>
+          <div *ngIf="activePage=='cd1'">
+            <app-cash-deposit-b></app-cash-deposit-b>
+          </div>
+          <div *ngIf="activePage=='cd2'">
+            <app-cash-deposit-c></app-cash-deposit-c>
+          </div>
+          <div *ngIf="activePage=='cd3'">
+            <app-cash-deposit-d></app-cash-deposit-d>
+          </div>
+          <div *ngIf="activePage=='cd4'">
+            <app-cash-deposit-e></app-cash-deposit-e>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="pull-left">
+            <button class="btn btn-info" (click)="prev()">Prev</button>
+          </div>
+          <div class="pull-right">
+            <button class="btn btn-info" (click)="next()">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div>
+        <div class="pull-left">
+          <h5><i class="fa fa-list" aria-hidden="true"></i> {{serviceTitle}}</h5>
+        </div>
+        <div class="pull-right" style="margin-right: 10px;">
+          <h5>{{total | tickFormat}}</h5>
+        </div>
+      </div>
+      <br/>
+      <app-cash-deposit-timetracking #edo (total)="updateTotal($event)"></app-cash-deposit-timetracking>
+    </div>
+  </div>
+</div>
+
+

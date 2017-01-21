@@ -1,0 +1,10 @@
+.time-track{
+  margin: 5px;
+  padding: 5px;
+  height: 30px;
+  color: black;
+}
+.active {
+  background-color: #00b3ee;
+  color: white;
+}
