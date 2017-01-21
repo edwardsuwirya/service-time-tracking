@@ -9,6 +9,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 mkdir time-tracking
 cd time-tracking
 git clone `https://github.com/edwardsuwirya/service-time-tracking.git`
+npm install
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
 ```
 
